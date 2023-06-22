@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Git checkout') {
       steps {
-        git ''
+        git 'https://github.com/adhi7862/star-agile-banking-finance.git'
       }
     }
     
