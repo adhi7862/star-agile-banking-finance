@@ -2,7 +2,7 @@
 def containerName = "finance-me"
 def tag = "latest"
 def dockerHubUser = "adhi7862"
-def httpPort = "8082"
+def httpPort = "8084"
 
 node {
     stage('Checkout') {
