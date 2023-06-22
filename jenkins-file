@@ -30,5 +30,7 @@ node {
             echo "Image push complete"
         }
     }
+    stage('execute ansible") {
+        
    
 }
