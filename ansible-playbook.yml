@@ -8,9 +8,19 @@
 
   - name : Install Docker
     command : sudo apt-get install -y docker.io
+    become : yes
+    become_user : root
 
   - name : Start Docker Service
     command : sudo systemctl start docker
+    become : yes
+    become_user : root
+
+  - name: stop container
+    command: sudo docker stop finance-me
+    
+  - name: remove container
+    command: sudo docker rm finance-me
 
   - name: Deploy Docker Container
-    command: docker run -itd -p 8084:8081 adhi7862/finance-me:latest
+    command: docker run -itd -p 8084:8081 --name finance-me adhi7862/finance-me:latest
