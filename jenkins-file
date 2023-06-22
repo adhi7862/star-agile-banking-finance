@@ -30,7 +30,9 @@ node {
             echo "Image push complete"
         }
     }
+    
     stage('execute ansible") {
-        
-   
+        ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'ansible.inv', playbook: 'ansible-playbook.yml'
+        }
+     
 }
