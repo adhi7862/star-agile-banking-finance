@@ -17,4 +17,4 @@
     become_user : root
 
   - name: Deploy Docker Container
-    command: docker run -itd -p 8084:8082 --name finance-me adhi7862/finance-me:latest
+    command: docker run -itd -p 8084:8081 --name finance-me adhi7862/finance-me:latest
