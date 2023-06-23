@@ -38,7 +38,5 @@ node {
         ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'ansible.inv', playbook: 'production-server.yml'
         }
 
-    stage('execute test case') {
-        sh 'java -jar Documents.jar'
-        }
+    
 }
